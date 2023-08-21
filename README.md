@@ -2,7 +2,7 @@
 <h1 align="center"> Tarefas - Pweb </h1>
 
 
-## Repositório voltado para a disciplina de Pweb..
+## Repositório voltado para a disciplina de Pweb.
 
 
 #  🛠️ Para rodar o projeto, basta seguir os passos abaixo:
