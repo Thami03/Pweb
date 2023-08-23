@@ -1,0 +1,40 @@
+p.verso{
+
+    color: blue;
+ 
+ }
+ p.mote{
+
+    color: rgb(100, 14, 158);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 15px;
+ }
+ 
+
+ a:visited {
+    color:black;
+}
+img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    
+  }
+  div{
+    display: inline-block;
+    
+  }
+  div.nome{
+    display: inline-block;
+    font-size: 17px;
+    
+  }
+  table {
+    border-collapse: collapse;
+    background-color: rgb(105, 176, 235);
+  }
+
+  td {
+    border: 1px solid black;
+    padding: 8px;
+  }
