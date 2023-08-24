@@ -1,5 +1,5 @@
 
-<h1 align="center"> Tarefas - Pweb </h1>
+<h1 align="center"> Tarefas - Programação web </h1>
 
 
 ## Repositório voltado para a disciplina de Pweb.
