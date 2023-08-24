@@ -5,15 +5,12 @@ p.verso{
  }
  p.mote{
 
-    color: rgb(100, 14, 158);
+    color: red;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 15px;
  }
  
 
- a:visited {
-    color:black;
-}
 img {
     border-radius: 50%;
     width: 40px;
@@ -38,3 +35,21 @@ img {
     border: 1px solid black;
     padding: 8px;
   }
+  a {
+    color: blue; /* Cor padrão do link */
+    text-decoration: none; /* Remover sublinhado padrão */
+  }
+  
+  /* Estilo para links visitados */
+  a:visited {
+    color: rgb(151, 116, 0); /* Cor do link após ser visitado */
+  }
+  
+  /* Estilo para links quando o mouse está sobre eles */
+  a:hover {
+    color: red; /* Cor do link quando o mouse está sobre ele */
+    text-decoration: underline; /* Adicionar sublinhado quando o mouse está sobre o link */
+  }
+  div.poeta img {
+    border-radius: 50%;  
+}
