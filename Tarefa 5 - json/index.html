@@ -1,54 +1,97 @@
 <!DOCTYPE html>
 
 <html>   
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">      
+        <title>Cervejas</title>            
+    </head>
+    <body>
+        <div><button id="botaoCarregar">Carregando cervejas...</button></div>
+        <table id="cervejasDiv">
+            <thead id="thead"> 
+                <tr>
+                    <th>Nome</th>
+                    <th>Álcool</th>
+                    <th>Style</th>
+                    <th>IBU</th>
+                </tr>
+            </thead>
+            <tbody id="cervejasTab"></tbody>
+        </table>
+    </body>   
+    <script>
+        let cervejas = [
+            {
+                name: "Guiness", 
+                alcohol: "10%",   
+                style: "APA",
+                ibu: "20"         
+            }, 
+            {
+                name: "Pilsner Urquell",
+                alcohol: "6%",
+                style: "Pilsen",
+                ibu: "30"              
+            }, 
+            {
+                name: "Becks",
+                alcohol: "5%",
+                style: "Red Ale",
+                ibu: "80"              
+            },
+            {
+                name: "Smithwick's Irish Red Ale",
+                alcohol: "59%",
+                style: "Red Ale",
+                ibu: "25"              
+            },
+            {
+                name: "Mexican Lager",
+                alcohol: "14%",
+                style: "Lager",
+                ibu: "8"              
+            },
+            {
+                name: "Fuller's IPA",
+                alcohol: "9%",
+                style: "English IPA",
+                ibu: "7"              
+            },
+            {
+                name: "Corona",
+                alcohol: "6%",
+                style: "Lager",
+                ibu: "63"              
+            },
+            {
+                name: "Sierra Nevada Pale Ale",
+                alcohol: "5.9%",
+                style: "APA",
+                ibu: "38"              
+            },
+            {
+                name: "Founders Imperial Stout",
+                alcohol: "9%",
+                style: "Lager",
+                ibu: "29"              
+            },
+        ];
+        
+        const carregarDiv = (cs, targetId = "cervejasDiv", lista = ["Nome", "Álcool", "Style", "IBU"], prop = ["name", "alcohol", "style", "ibu"]) => {
+            const tableBody = document.getElementById(targetId); 
+            const thead = document.getElementById("thead"); 
+            thead.innerHTML = lista.map(header => `<th>${header}</th>`).join("");
 
-   <head>
+            const itensHtml = cs.map(item => { 
+                const itemProp = prop.map(obj => `<td>${item[obj]}</td>`).join("");
+                return `<tr>${itemProp}</tr>`;
+            });
 
-      <meta charset="UTF-8">      
+            tableBody.innerHTML = `${itensHtml.join("\n")}`;
+        };
 
-   </head>
-
-
-
-   <body>
-
-      <div><button id="botaoCarregar">Carregando cervejas...</button></div>
-
-      <div id="cervejasDiv"></div>            
-
-   </body>   
-
-   
-
-   <script>
-
-
-
-      let cervejas = ["Guiness", "Desperados", "Becks"]
-
-    
-
-      //cs é um array de cervejas
-
-      const carregarDiv = cs => {
-
-         const div = document.getElementById("cervejasDiv")
-
-         const itensHtml = cs.map( item => `<div>${item}</div>` ) 
-
-         div.innerHTML = `${itensHtml.join("\n")}`
-
-      }
-
-
-
-      let botao = document.getElementById("botaoCarregar")
-
-      botao.addEventListener("click", () => carregarDiv(cervejas) )                 
-
-
-
-   </script>
-
+        const botao = document.getElementById("botaoCarregar");
+        botao.addEventListener("click", () => carregarDiv(cervejas, "cervejasTab"));
+    </script>
 </html>
-
