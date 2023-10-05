@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Indicando Séries</title>
+</head>
+<body>
+    <div id="botoes">
+        <a href="#" id="botaoCarregar">Carregar Séries</a>
+        <a href="#" id="botaoOrdenar">Ordenar Séries</a>
+    </div>
+    
+    <div id="container">
+        <div id="meuAmor"></div>      
+    </div>        
+ </body>   
+
+ <script>
+    let series = ["Supernatural", "Game of thrones", "A casa do dragão", "Gossip girl", "Teen wolf"];
+
+    const carregarDiv = (srs) => {
+        const div = document.getElementById("meuAmor");
+        const itensHtml = srs.map(serie => `<h1>${serie}</h1>`); 
+        div.innerHTML = `${itensHtml.join("\n")}`;
+    }
+
+    let botaoCarregar = document.getElementById("botaoCarregar");
+    botaoCarregar.addEventListener("click", () => carregarDiv(series));
+
+    let botaoOrdenar = document.getElementById("botaoOrdenar");
+    botaoOrdenar.addEventListener("click", function() {
+        const ordenarSeries = [...series].sort();
+        carregarDiv(ordenarSeries);
+    });                     
+
+              
+ </script>
+</html>

@@ -1,0 +1,29 @@
+body {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: top;
+    justify-content: center;
+    background-image: url('sup.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+color:white;
+}
+
+div#botoes {
+    padding-bottom: 10px;
+}
+
+div#botoes a {
+    text-decoration: none;
+    
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(247, 142, 5);
+    color: white;
+    font-size: large;
+}
+
+div#botoes a:hover {
+    background-color: #e6cb9a;
+}
