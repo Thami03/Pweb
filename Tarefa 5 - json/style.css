@@ -5,15 +5,13 @@ body{
     color:white;
 }
 
-div, table{
-    padding: 0;
-}
-
 table{
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
     border: 1px solid white;
+    padding: 0;
+
 }
 
 th{
